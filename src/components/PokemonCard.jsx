@@ -1,12 +1,19 @@
-function PokemonCard() {
+
+function PokemonCard({pokemon}) {
+  // const pokemon = { name: "mew" };
     return (
-        <figure> 
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt=""/>
+      <figure className="pokemon-card">
+        {
+          pokemon.imgSrc != null
+          ? <img src={pokemon.imgSrc} alt={pokemon.name} className="pokemon-image" />
+          : <p className="no-image">???</p>
+        } 
     
-    <figcaption> Bulbasaur </figcaption>
+        <figcaption> {pokemon.name} </figcaption>
+        
     </figure>
     )
     
   }
   
-  export default PokemonCard;
+  export default PokemonCard; 
