@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 function PokemonCard({pokemon}) {
-  // const pokemon = { name: "mew" };
+ 
     return (
       <figure className="pokemon-card">
         {
